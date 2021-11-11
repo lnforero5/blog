@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 class BlogController extends Controller
 {
     public function index(){
-        return("Hola blogs");
+        return view('blog.index');
     }
 
     public function create(){
-        return("Aqui podrás crear un blog");   
+        return view('blog.create');   
     }
 
     public function show($blog){
-        return("Hola blogs: $blog");
+        return view('blog.show',['blog' => $blog]); 
     }
 }
